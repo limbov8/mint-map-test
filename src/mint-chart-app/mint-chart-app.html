@@ -1,0 +1,40 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/mint-chart/mint-chart.html">
+
+<dom-module id="mint-chart-app">
+  <template>
+    <mint-chart style="width: 600px"></mint-map>
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+
+    class MintChartApp extends Polymer.Element {
+      static get is() { return 'mint-chart-app'; }
+      static get properties() {
+        return {
+          variables: {
+            type: Array,
+            notify:true,
+            readOnly:false,
+            value:[]
+          }
+        };
+      }
+      ready() {
+        super.ready();
+
+        // this.root.querySelector("mint-chart").style.height = window.innerHeight + "px";
+        // window.onresize = (function() {
+        //           this.root.querySelector("mint-chart").style.height = window.innerHeight + "px";
+        //         }).bind(this);
+
+      } 
+    }
+
+    window.customElements.define(MintChartApp.is, MintChartApp);
+  </script>
+</dom-module>
