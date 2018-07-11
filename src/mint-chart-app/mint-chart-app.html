@@ -3,7 +3,13 @@
 
 <dom-module id="mint-chart-app">
   <template>
-    <mint-chart style="width: 600px"></mint-map>
+    <mint-chart style="width: 600px" config="[[configBubbleBaseline]]"></mint-chart>
+    <hr><br>
+    <mint-chart style="width: 600px" config="[[configBubblePrecip_5_percent_dec]]"></mint-chart>
+    <hr><br>
+    <mint-chart style="width: 600px" config="[[configBubblePrecip_5_percent_inc]]"></mint-chart>
+    <hr><br>
+    <mint-chart style="width: 600px" config="[[configCombine]]"></mint-chart>
   </template>
 
   <script>
@@ -16,12 +22,30 @@
       static get is() { return 'mint-chart-app'; }
       static get properties() {
         return {
-          variables: {
-            type: Array,
+          configCombine: {
+            type: Object,
             notify:true,
             readOnly:false,
-            value:[]
-          }
+            value:{name: "", type:"combine", data:""}
+          },
+          configBubbleBaseline: {
+            type: Object,
+            notify:true,
+            readOnly:false,
+            value:{name: "MINTlanduse Baseline 20180709", type:"bubble", data:"http://jonsnow.usc.edu:8081/mintmap/csv/MINTlanduse-baseline-20180709.json"}
+          },
+          configBubblePrecip_5_percent_dec:{
+            type: Object,
+            notify:true,
+            readOnly:false,
+            value:{name: "MINTlanduse Precip_5_percent_dec 20180709", type:"bubble", data:"http://jonsnow.usc.edu:8081/mintmap/csv/MINTlanduse-precip_5_percent_dec-20180709.json"}
+          },
+          configBubblePrecip_5_percent_inc:{
+            type: Object,
+            notify:true,
+            readOnly:false,
+            value:{name: "MINTlanduse Precip_5_percent_inc 20180709", type:"bubble", data:"http://jonsnow.usc.edu:8081/mintmap/csv/MINTlanduse-precip_5_percent_inc-20180709.json"}
+          },
         };
       }
       ready() {
