@@ -3,6 +3,9 @@
 
 <dom-module id="mint-chart-app">
   <template>
+    
+    <mint-chart style="width: 600px" config="[[configPieChart]]"></mint-chart>
+    <hr><br>
     <mint-chart style="width: 600px" config="[[configBubbleBaseline]]"></mint-chart>
     <hr><br>
     <mint-chart style="width: 600px" config="[[configBubblePrecip_5_percent_dec]]"></mint-chart>
@@ -27,6 +30,12 @@
             notify:true,
             readOnly:false,
             value:{name: "", type:"combine", data:""}
+          },
+          configPieChart: {
+            type: Object,
+            notify:true,
+            readOnly:false,
+            value:{name: "", type:"pie", data:""}
           },
           configBubbleBaseline: {
             type: Object,
