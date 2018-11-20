@@ -3,7 +3,8 @@
 
 <dom-module id="mint-chart-app">
   <template>
-    
+    <mint-chart style="width: 600px" config="[[configPie2Chart]]"></mint-chart>
+    <hr><br>
     <mint-chart style="width: 600px" config="[[configPieChart]]"></mint-chart>
     <hr><br>
     <mint-chart style="width: 600px" config="[[configBubbleBaseline]]"></mint-chart>
@@ -36,6 +37,12 @@
             notify:true,
             readOnly:false,
             value:{name: "", type:"pie", data:""}
+          },
+          configPie2Chart: {
+            type: Object,
+            notify:true,
+            readOnly:false,
+            value:{name: "second", type:"pie", data:""}
           },
           configBubbleBaseline: {
             type: Object,
