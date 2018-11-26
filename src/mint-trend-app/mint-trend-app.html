@@ -1,9 +1,9 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
-<link rel="import" href="../../bower_components/mint-diff/mint-diff.html">
+<link rel="import" href="../../bower_components/mint-trend/mint-trend.html">
 
-<dom-module id="mint-diff-app">
+<dom-module id="mint-trend-app">
   <template>
-    <mint-diff style="width: 100vw;" datasets="[[datasets]]"></mint-diff>
+    <mint-trend style="width: 100vw;" datasets="[[datasets]]"></mint-trend>
   </template>
 
   <script>
@@ -12,15 +12,15 @@
      * @polymer
      */
 
-    class MintDiffApp extends Polymer.Element {
-      static get is() { return 'mint-diff-app'; }
+    class MintTrendApp extends Polymer.Element {
+      static get is() { return 'mint-trend-app'; }
       static get properties() {
         return {
           datasets: {
             type: Object,
             notify:true,
             readOnly:false,
-            value:{name: "1-2-3 diff", type:"diff",datasets:[1,2,3]}
+            value:{id: "fldas01_fldas02_trend_chart", type:"trend",url:""}
           }
         };
       }
@@ -33,6 +33,6 @@
     //https://mint.isi.edu/dcat/variables/landuse-south-sudan?file_name=https%3A%2F%2Fdrive.google.com%2Fuc%3Fexport%3Ddownload%26id%3D1eVToBB0ZLL1LGspPqju_Bo7a7yk99KJj&variable_i
     // https://mint.isi.edu/dcat/variables/precipitation-south-sudan?file_name=https%3A%2F%2Fedcintl.cr.usgs.gov%2Ffews_geoengine4%2Frest%2Fimage%2Fgeotiff%2Fdataset%2Ffewschirps%2Freg
 
-    window.customElements.define(MintDiffApp.is, MintDiffApp);
+    window.customElements.define(MintTrendApp.is, MintTrendApp);
   </script>
 </dom-module>
