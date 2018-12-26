@@ -1,5 +1,6 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
 import 'mint-chart/mint-chart.js'
+
 /**
  * @customElement
  * @polymer
