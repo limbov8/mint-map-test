@@ -4,36 +4,39 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>mint-map-test-app test</title>
+    <title>mint-test-app test</title>
 
-    <script src="../../../webcomponentsjs/webcomponents-loader.js"></script>
-    <script src="../../../web-component-tester/browser.js"></script>
+    <script src="../../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../../node_modules/@polymer/test-fixture/test-fixture.js"></script>
+    <script src="../../node_modules/mocha/mocha.js"></script>
+    <script src="../../node_modules/chai/chai.js"></script>
+    <script src="../../node_modules/wct-mocha/wct-mocha.js"></script>
 
-    <link rel="import" href="../../src/mint-map-test-app/mint-map-test-app.html">
+    <script type="module" src="../../src/mint-test-app/mint-test-app.js"></script>
   </head>
   <body>
 
     <test-fixture id="BasicTestFixture">
       <template>
-        <mint-map-test-app></mint-map-test-app>
+        <mint-test-app></mint-test-app>
       </template>
     </test-fixture>
 
     <test-fixture id="ChangedPropertyTestFixture">
       <template>
-        <mint-map-test-app prop1="new-prop1"></mint-map-test-app>
+        <mint-test-app prop1="new-prop1"></mint-test-app>
       </template>
     </test-fixture>
 
     <script>
-      suite('mint-map-test-app', function() {
+      suite('mint-test-app', function() {
 
         test('instantiating the element with default properties works', function() {
           var element = fixture('BasicTestFixture');
-          assert.equal(element.prop1, 'mint-map-test-app');
+          assert.equal(element.prop1, 'mint-test-app');
           var elementShadowRoot = element.shadowRoot;
           var elementHeader = elementShadowRoot.querySelector('h2');
-          assert.equal(elementHeader.innerHTML, 'Hello mint-map-test-app!');
+          assert.equal(elementHeader.innerHTML, 'Hello mint-test-app!');
         });
 
         test('setting a property on the element works', function() {
