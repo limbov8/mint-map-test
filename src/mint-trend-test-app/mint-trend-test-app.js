@@ -1,5 +1,5 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
-
+import 'mint-trend/mint-trend.js'
 /**
  * @customElement
  * @polymer
@@ -12,17 +12,23 @@ class MintTrendTestApp extends PolymerElement {
           display: block;
         }
       </style>
-      <h2>Hello [[prop1]]!</h2>
+      <mint-trend style="width: 100vw;" datasets="[[datasets]]"></mint-trend>
     `;
   }
   static get properties() {
     return {
-      prop1: {
-        type: String,
-        value: 'mint-trend-test-app'
+      datasets: {
+        type: Object,
+        notify:true,
+        readOnly:false,
+        value:{id: "fldas01_fldas02_trend_chart", type:"trend",url:""}
       }
     };
   }
+  ready() {
+    super.ready();
+  }
+
 }
 
 window.customElements.define('mint-trend-test-app', MintTrendTestApp);
