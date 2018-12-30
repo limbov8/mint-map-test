@@ -2,10 +2,10 @@
   "name": "mint-test",
   "dependencies": {
     "@polymer/polymer": "^3.0.0",
-    "mint-chart": "https://github.com/spatial-computing/mint-chart/tarball/master",
-    "mint-map": "https://github.com/spatial-computing/mint-map/tarball/master",
-    "mint-time": "https://github.com/spatial-computing/mint-time/tarball/master",
-    "mint-trend": "https://github.com/spatial-computing/mint-trend/tarball/master"
+    "mint-chart": "git+ssh://git@github.com:spatial-computing/mint-chart.git",
+    "mint-map": "git+ssh://git@github.com:spatial-computing/mint-map.git",
+    "mint-time": "git+ssh://git@github.com:spatial-computing/mint-time.git",
+    "mint-trend": "git+ssh://git@github.com:spatial-computing/mint-trend.git"
   },
   "devDependencies": {
     "@polymer/test-fixture": "^4.0.2",
