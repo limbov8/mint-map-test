@@ -17,9 +17,10 @@ class MintMapTestApp extends PolymerElement {
         notify:true,
         readOnly:false,
         value:[{ layerName: 'chirps.rainfall.precipitation', 
-                    md5: '6f5ecde47d5a3303cfe9463ad57d4dc8', 
-                    dcid: 0
-                  }]
+                 md5: '6f5ecde47d5a3303cfe9463ad57d4dc8', 
+                 dcid: 0
+                }
+              ]
       }
     };
   }

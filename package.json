@@ -2,6 +2,8 @@
   "name": "mint-test",
   "dependencies": {
     "@polymer/polymer": "^3.0.0",
+    "highcharts": "^7.0.1",
+    "jquery": "^3.3.1",
     "mint-chart": "git+ssh://git@github.com/spatial-computing/mint-chart.git",
     "mint-map": "git+ssh://git@github.com/spatial-computing/mint-map.git",
     "mint-time": "git+ssh://git@github.com/spatial-computing/mint-time.git",

@@ -8,6 +8,10 @@ import 'mint-chart/mint-chart.js'
 class MintChartTestApp extends PolymerElement {
   static get template() {
     return html`
+      <mint-chart style="width: 600px" config="[[configBarChart]]"></mint-chart>
+      <hr><br>
+      <mint-chart style="width: 600px" config="[[configDotChart]]"></mint-chart>
+      <hr><br>
       <mint-chart style="width: 600px" config="[[configPie2Chart]]"></mint-chart>
       <hr><br>
       <mint-chart style="width: 600px" config="[[configPieChart]]"></mint-chart>
@@ -23,6 +27,18 @@ class MintChartTestApp extends PolymerElement {
   }
   static get properties() {
     return {
+      configDotChart: {
+        type: Object,
+        notify:true,
+        readOnly:false,
+        value:{name: "dat", type:"dot", data:""}
+      },
+      configBarChart: {
+        type: Object,
+        notify:true,
+        readOnly:false,
+        value:{name: "climatology", type:"bar", data:""}
+      },
       configCombine: {
         type: Object,
         notify:true,
