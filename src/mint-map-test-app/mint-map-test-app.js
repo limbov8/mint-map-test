@@ -16,8 +16,8 @@ class MintMapTestApp extends PolymerElement {
         type: Array,
         notify:true,
         readOnly:false,
-        value:[{ layerName: 'chirps.rainfall.precipitation', 
-                 md5: '6f5ecde47d5a3303cfe9463ad57d4dc8', 
+        value:[{ layerName: 'South_Sudan_population_density', 
+                 md5: 'f9a36bd83beacc40fd2089c16996bbb3', 
                  dcid: 0
                 }
               ]
