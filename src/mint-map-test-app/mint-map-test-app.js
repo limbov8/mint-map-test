@@ -16,8 +16,9 @@ class MintMapTestApp extends PolymerElement {
         type: Array,
         notify:true,
         readOnly:false,
-        value:[{ layerName: 'South_Sudan_population_density', 
-                 dataset_id: '90db5c2f-ab2d-4086-8e07-72edb43545cd'
+        value:[{ 
+                  layerName: 'South_Sudan_population_density', 
+                  dataset_id: '90db5c2f-ab2d-4086-8e07-72edb43545cd'
               }]
       }
     };
@@ -31,7 +32,14 @@ class MintMapTestApp extends PolymerElement {
                   window._mintMap.onresize();
               }
             }).bind(this);
+    let self = this;
+    setTimeout(function () {
+      self.variables = [{
+                 dataset_id: '7b537a84-3f89-4948-bc1c-c201c2b89b87'
+              }];
+    }, 5000)
   } 
+
 }
 
 
