@@ -18,8 +18,7 @@ class MintMapTestApp extends PolymerElement {
         readOnly:false,
         value:[{ layerName: 'South_Sudan_population_density', 
                  dataset_id: '90db5c2f-ab2d-4086-8e07-72edb43545cd'
-                }
-              ]
+              }]
       }
     };
   }
