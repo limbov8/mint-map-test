@@ -32,12 +32,12 @@ class MintMapTestApp extends PolymerElement {
                   window._mintMap.onresize();
               }
             }).bind(this);
-    let self = this;
-    setTimeout(function () {
-      self.variables = [{
-                 dataset_id: '7b537a84-3f89-4948-bc1c-c201c2b89b87'
-              }];
-    }, 5000)
+    // let self = this;
+    // setTimeout(function () {
+    //   self.variables = [{
+    //              dataset_id: '7b537a84-3f89-4948-bc1c-c201c2b89b87'
+    //           }];
+    // }, 5000)
   } 
 
 }
