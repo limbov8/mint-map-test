@@ -19,6 +19,9 @@ class MintMapTestApp extends PolymerElement {
         value:[{ 
                   layerName: 'South_Sudan_population_density', 
                   dataset_id: '90db5c2f-ab2d-4086-8e07-72edb43545cd'
+              },{ 
+                  layerName: 'South Sudan Roads', 
+                  dataset_id: '7d506309-5943-4342-b4e4-b65b88fee654'
               }]
       }
     };
